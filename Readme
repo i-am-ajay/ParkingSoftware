@@ -1,0 +1,14 @@
+Classes :
+
+com.sgrh - :
+* FetchParkingRecord - Find emp details based on gaa number, in ParkingDetail table, if it's a new entry that has to be 
+made in system then search in PIS.
+
+* ParkingDetailsFromEmpDetails - Converts Employee details fetched from PIS into ParkingDetails entity that is compaitble with
+Parkingdetail table.
+
+* PopulateEmpDetails - Servlet gets emp data, convert it to Parkingdetail data and return to index.jsp page.
+
+* SaveRecordInDb - servlet gets employee data from index.jsp page and enter it in parkingdetails db.
+
+* UpdateEditEmployee - Most probably not in use.

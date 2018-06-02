@@ -1,0 +1,4 @@
+user = sa
+password = admin
+driver = mssql
+database = parking

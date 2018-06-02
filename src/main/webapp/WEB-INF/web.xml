@@ -1,0 +1,58 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>SaveRecordInDb</servlet-name>
+  	<display-name>SaveRecordInDb</display-name>
+  	<description></description>
+  	<servlet-class>com.sgrh.SaveRecordInDb</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PopulateEmpDetails</servlet-name>
+  	<display-name>PopulateEmpDetails</display-name>
+  	<description></description>
+  	<servlet-class>com.sgrh.PopulateEmpDetails</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FetchParkingRecord</servlet-name>
+  	<display-name>FetchParkingRecord</display-name>
+  	<description></description>
+  	<servlet-class>com.sgrh.FetchParkingRecord</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UpdateEditEmployee</servlet-name>
+  	<display-name>UpdateEditEmployee</display-name>
+  	<description></description>
+  	<servlet-class>com.sgrh.UpdateEditEmployee</servlet-class>
+  </servlet>
+    <servlet>
+  	<servlet-name>ParkingServlet</servlet-name>
+  	<display-name>ParkingServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.sgrh.conf.ParkingServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+  		<servlet-name>SaveRecordInDb</servlet-name>
+  		<url-pattern>/saverecord</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>PopulateEmpDetails</servlet-name>
+  	<url-pattern>/populate</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FetchParkingRecord</servlet-name>
+  	<url-pattern>/fetch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UpdateEditEmployee</servlet-name>
+  	<url-pattern>/UpdateEdit</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+  	<servlet-name>ParkingServlet</servlet-name>
+  	<url-pattern>/userlogin</url-pattern>
+  </servlet-mapping> 
+</web-app>
