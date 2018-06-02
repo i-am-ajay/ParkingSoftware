@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
 import com.sgrh.dbo.ParkingDbo;
 import com.sgrh.entities.User;
 
@@ -32,9 +34,12 @@ public class ParkingServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userName = request.getParameter("user");
 		String password = request.getParameter("password");
+		String SALT = "parking";
 		ParkingDbo pDbo = new ParkingDbo();
 		User user = pDbo.getLoginDetails(userName);
 		String page = request.getParameter("uri");
+		password = DigestUtils.sha1Hex(password+SALT);
+		System.out.println(password);
 		if(!(user != null)) {
 			response.sendRedirect("login.jsp");
 			return;
